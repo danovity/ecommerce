@@ -1,0 +1,139 @@
+.normal-text{
+    font-size: 1rem;
+    font-weight: 500;
+    color: $color-grey;
+    text-transform: uppercase;
+    
+    &__footer{
+        color: $color-grey;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 700;
+
+        &--quick-link{
+                position:relative;
+                color: $color-grey;
+                text-transform: uppercase;
+                text-decoration: none;
+                transition: all .2s;
+                
+
+                &::before{
+                    position: absolute;
+                    height: .6rem;
+                    width: 1rem;
+                    content: "";
+                    background-color: #ffea00;
+                    top: .35rem;
+                    left: -2rem;
+                    display:none;
+                }
+
+                &:hover{
+                    margin-left: 2rem;
+                    color:$color-primary;
+                }
+
+                &:hover::before{
+                    display:initial;
+                    color:$color-primary;
+                }
+        }
+
+        &--recent-blogs{
+
+        }
+        
+        &--tag{
+            background-color: #1d1d1d;
+            padding: .5rem 3rem;
+
+            //&:not(:first-child):not(:nth-child(2)){
+                //margin-top:1rem;
+            //}
+            
+
+            &:nth-child(odd){
+                //margin-right:1rem;
+            }
+
+            &:nth-child(even){
+                //margin-left:1rem;
+            }
+        }
+
+        &--find-us-on{
+
+        }
+
+        &-link{
+            text-decoration: none;
+
+            &:hover{
+                color:$color-primary;
+            }
+        }
+    }
+    
+    & a{
+        color: $color-grey;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: all .2s;
+    }
+
+    &:hover a{
+        color:$color-primary;
+    }
+
+    &__navigation{
+        font-weight:900;
+        color: $color-black;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+    }
+
+    &__description{
+        color:$color-black;
+        font-weight: 700;
+        font-size:1.2rem;
+        letter-spacing: .2rem;
+    }
+
+    &__divider{
+        font-weight:900;
+        color: $color-black;
+        font-size:1.6rem;
+    }
+    
+}
+
+.heading-primary{
+    font-size:8rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+}
+
+.heading-secondary{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+}
+
+.heading-tertiary{
+    font-size:1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    color: black;
+    font-weight: 900;
+    letter-spacing: .2rem;
+}
+
+.heading-quaternary{
+    font-size: 1rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    letter-spacing: .2rem;
+}

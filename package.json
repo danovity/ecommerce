@@ -1,0 +1,17 @@
+{
+  "name": "02_ecommerce",
+  "version": "1.0.0",
+  "description": "hackeryou_ecommerce",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w='sass/*/*.scss'"
+  },
+  "author": "Sean Ye",
+  "license": "ISC",
+  "dependencies": {
+    "all": "0.0.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  }
+}

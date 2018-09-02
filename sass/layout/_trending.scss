@@ -1,92 +1,110 @@
-.trending{
+.trending {
     background-color: $color-background-grey;
     display: grid;
 
-    &__row-one{
+    &__row-one {
         grid-column: 2;
     }
 
-    &__row-two{
+    &__row-two {
         grid-column: 2;
         justify-self: center;
     }
 
-    &__row-three{
+    &__row-three {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
         grid-column: 2;
         grid-auto-rows: 30rem;
         justify-content: center;
     }
 
-    &__item{
+    &__item {
         background-color: $color-white;
         padding: 4rem;
-        transition:all .2s;
+        transition: all .2s;
 
-        &--1{
-            grid-column:span 1;
-            grid-row:span 1;
-            order:1;
-
+        &--1 {
+            grid-column: span 1;
+            grid-row: span 1;
+            order: 1;
         }
 
-        &--2{
-            grid-column:span 1;
-            grid-row:span 1;
-            order:2;
-
+        &--2 {
+            grid-column: span 1;
+            grid-row: span 1;
+            order: 2;
+            background-image: url('../assets/item-2.jpg');
+            background-size: cover;
         }
 
-        &--3{
-            grid-column:span 1;
-            grid-row:span 1;
-            order:3;
-
+        &--3 {
+            grid-column: span 1;
+            grid-row: span 1;
+            order: 3;
+            background-image: url('../assets/item-3.jpg');
+            background-size: 65%;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
-        &--4{
-            grid-column:span 1;
-            grid-row:span 1;
-            order:4;
-
+        &--4 {
+            grid-column: span 1;
+            grid-row: span 1;
+            order: 4;
+            background-image: url('../assets/item-4.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;
         }
 
-        &--5{
-            grid-column:span 1;
-            grid-row:span 1;
-            order:5;
-
+        &--5 {
+            grid-column: span 1;
+            grid-row: span 1;
+            order: 5;
+            background-image: url('../assets/item-5-1.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 90%;
         }
 
-        &--6{
-            grid-column:span 1;
-            grid-row:span 1;
-            order:6;
-
+        &--6 {
+            grid-column: span 1;
+            grid-row: span 1;
+            order: 6;
+            background-image: url('../assets/item-6.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 80%;
         }
 
-        &--7{
-            grid-column:span 1;
-            grid-row:span 1;
-            order:8;
+        &--7 {
+            grid-column: span 1;
+            grid-row: span 1;
+            order: 8;
+            background-image: url('../assets/item-7.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 80%;
         }
 
-        &--8{
-            grid-column:span 1;
-            grid-row:span 1;
-            order:9;
+        &--8 {
+            grid-column: span 1;
+            grid-row: span 1;
+            order: 9;
+            background-image: url('../assets/item-8.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 80%;
         }
 
-        &--9{
-            grid-column:span 2;
-            grid-row:span 2;
-            order:7;
-
+        &--9 {
+            grid-column: span 2;
+            grid-row: span 2;
+            order: 7;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
-            
             background-color: #f8f8f6;
 
             @media only screen and (max-width: 550px) {
@@ -96,44 +114,41 @@
                 grid-template-rows: 1fr;
             }
         }
-
-        
     }
-    &__item:hover{
+
+    &__item:hover {
         background-color: $color-primary;
+        background-image: none;
     }
 
-    &__item:hover>&__container--hover{
+    &__item:hover>&__container--hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width:100%;
-        height:100%;
+        width: 100%;
+        height: 100%;
     }
 
     &__item:hover>&__container--small,
-    &__item:hover>&__container--large
-    {
-        display:none;
+    &__item:hover>&__container--large {
+        display: none;
     }
 
-    &__hover-button{
-        &::before{
+    &__hover-button {
+        &::before {
             left: 9.5rem;
         }
-    
-        &::after{
+
+        &::after {
             left: 8rem;
         }
     }
 
-    &__container{
-        &--small{
+    &__container {
+        &--small {}
 
-        }
-
-        &--large{
+        &--large {
             grid-column: 1;
             grid-row: 2;
             justify-self: center;
@@ -142,45 +157,42 @@
             @media only screen and (max-width: 550px) {
                 grid-row: 1;
             }
-            
         }
 
-        &--hover{
-            display:none;
-            transition:all .2s;
+        &--hover {
+            display: none;
+            transition: all .2s;
 
-            &--large{
-                transform:translateX(50%) translateY(50%);
+            &--large {
+                transform: translateX(50%) translateY(50%);
 
                 @media only screen and (max-width: 550px) {
-                    transform:translateX(0%) translateY(0%);
+                    transform: translateX(0%) translateY(0%);
                 }
             }
         }
     }
 
-    &__container-header{
-        margin-bottom:2rem;
+    &__container-header {
+        margin-bottom: 2rem;
 
-        &--hover{
-            position:relative;
+        &--hover {
+            position: relative;
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
 
-            &::before{
-                content:"$";
-                position:absolute;
+            &::before {
+                content: "$";
+                position: absolute;
                 left: -1rem;
                 font-size: 1.2rem;
             }
         }
     }
 
-    &__container-description{
-        margin-bottom:2rem;
+    &__container-description {
+        margin-bottom: 2rem;
     }
 
-    &__container-price{
-
-    }
+    &__container-price {}
 }
